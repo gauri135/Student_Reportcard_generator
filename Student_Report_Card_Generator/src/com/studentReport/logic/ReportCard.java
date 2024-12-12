@@ -18,30 +18,35 @@ public class ReportCard {
 
 	public void input() {
 
-		System.out.println("**Students Details**");
-		System.out.println("________________________________");
-        System.out.println();
-		System.out.println("Enter the Student_id :- ");
+		System.out.println("   _Students Details_   ");
+		System.out.println();
+		System.out.print(" Enter the Student_id :- ");
 		student.setStudent_Id(sc.nextInt());
-		System.out.println("Enter the Student_Name :- ");
+		System.out.println();
+		System.out.print(" Enter the Student_Name :- ");
 		student.setStudent_Name(sc.next());
-		System.out.println("Enter the Student_Age :- ");
+		System.out.println();
+		System.out.print(" Enter the Student_Age :- ");
 		student.setStudent_age(sc.nextInt());
 		System.out.println();
-		System.out.println("**Subjects Marks**");
-		System.out.println("________________________________");
+		System.out.println("  _Subjects Marks_  ");
 		System.out.println();
-		System.out.println("Markes Of Marathi :-");
+		System.out.print(" Markes Of Marathi :-");
 		subjects.setMarathi(sc.nextInt());
-		System.out.println("Markes Of English :-");
+		System.out.println();
+		System.out.print(" Markes Of English :-");
 		subjects.setEnglish(sc.nextInt());
-		System.out.println("Markes Of Biology :-");
+		System.out.println();
+		System.out.print(" Markes Of Biology :-");
 		subjects.setBiology(sc.nextInt());
-		System.out.println("Markes Of Chemistry :-");
+		System.out.println();
+		System.out.print(" Markes Of Chemistry :-");
 		subjects.setChemistry(sc.nextInt());
-		System.out.println("Markes Of Physics :-");
+		System.out.println();
+		System.out.print(" Markes Of Physics :-");
 		subjects.setPhysics(sc.nextInt());
-		System.out.println("Markes Of Maths :-");
+		System.out.println();
+		System.out.print(" Markes Of Maths :-");
 		subjects.setMaths(sc.nextInt());
 		System.out.println();
 
@@ -52,29 +57,30 @@ public class ReportCard {
 		TotalMarks = (long) subjects.getMarathi() + subjects.getEnglish() + subjects.getBiology()
 				+ subjects.getChemistry() + subjects.getPhysics() + subjects.getMaths();
 
-		average = TotalMarks / 2;
-
 		percentage = (double) TotalMarks / 600 * 100;
 
 	}
 
 	public void display() {
-		System.out.println("### _Report Card_ ####");
-		System.out.println("Student ID :- " + student.getStudent_Id());
-		System.out.println("Student Name :- " + student.getStudent_Name());
-		System.out.println("Student Age :- " + student.getStudent_age());
-		System.out.println();
-		System.out.println("_Subject Marks_");
-		System.out.println(" Marathi " + subjects.getMarathi());
-		System.out.println(" English " + subjects.getEnglish());
-		System.out.println(" Chemistry " + subjects.getChemistry());
-		System.out.println(" Biology " + subjects.getBiology());
-		System.out.println(" Physics " + subjects.getPhysics());
-		System.out.println(" Maths " + subjects.getMaths());
-		System.out.println("__________________________________________");
-		System.out.println(" Total :- " + TotalMarks);
-		System.out.println(" Average :- " + average);
-		System.out.println(" Percentage :- " + percentage + "%");
+		System.out.println("╔═══════════════════════════════════════════╗");
+		System.out.println("║               _Report Card_               ║");
+		System.out.println("╠═══════════════════════════════════════════╣");
+		System.out.printf("║ %-15s : %-23s ║\n", "Student ID", student.getStudent_Id());
+		System.out.printf("║ %-15s : %-23s ║\n", "Student Name", student.getStudent_Name());
+		System.out.printf("║ %-15s : %-23s ║\n", "Student Age", student.getStudent_age());
+		System.out.println("╠═══════════════════════════════════════════╣");
+		System.out.println("║               _Subject Marks_             ║");
+		System.out.println("╠═══════════════════════════════════════════╣");
+		System.out.printf("║ %-15s : %-23s ║\n", "Marathi", subjects.getMarathi());
+		System.out.printf("║ %-15s : %-23s ║\n", "English", subjects.getEnglish());
+		System.out.printf("║ %-15s : %-23s ║\n", "Chemistry", subjects.getChemistry());
+		System.out.printf("║ %-15s : %-23s ║\n", "Biology", subjects.getBiology());
+		System.out.printf("║ %-15s : %-23s ║\n", "Physics", subjects.getPhysics());
+		System.out.printf("║ %-15s : %-23s ║\n", "Maths", subjects.getMaths());
+		System.out.println("╠═══════════════════════════════════════════╣");
+		System.out.printf("║ %-15s : %-23s ║\n", "Total", TotalMarks);
+		System.out.printf("║ %-15s : %-23s ║\n", "Percentage", percentage + "%");
+		System.out.println("╚═══════════════════════════════════════════╝");
 		grade();
 
 	}
