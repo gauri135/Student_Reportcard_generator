@@ -1,44 +1,76 @@
 package com.studentReport.pojo;
 
+import java.util.ArrayList;
+
 public class Student {
 
-	private int student_Id;
-	private String student_Name;
-	private int student_age;
+	String name;
+	int rollNumber;
+	int age;
+	String gender;
+	String grade;
+	ArrayList<Subjects> subjects; // List of subjects
 
 	public Student() {
 
 	}
 
-	public Student(int student_Id, String student_Name, int student_age) {
+	public Student(String name, int rollNumber, int age, String gender, String grade, ArrayList<Subjects> subjects) {
 		super();
-		this.student_Id = student_Id;
-		this.student_Name = student_Name;
-		this.student_age = student_age;
+		this.name = name;
+		this.rollNumber = rollNumber;
+		this.age = age;
+		this.gender = gender;
+		this.grade = grade;
+		this.subjects = subjects;
 	}
 
-	public int getStudent_Id() {
-		return student_Id;
+	public String getName() {
+		return name;
 	}
 
-	public void setStudent_Id(int student_Id) {
-		this.student_Id = student_Id;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public String getStudent_Name() {
-		return student_Name;
+	public int getRollNumber() {
+		return rollNumber;
 	}
 
-	public void setStudent_Name(String student_Name) {
-		this.student_Name = student_Name;
+	public void setRollNumber(int rollNumber) {
+		this.rollNumber = rollNumber;
 	}
 
-	public int getStudent_age() {
-		return student_age;
+	public int getAge() {
+		return age;
 	}
 
-	public void setStudent_age(int student_age) {
-		this.student_age = student_age;
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	public String getGrade() {
+		return grade;
+	}
+
+	public void setGrade(String grade) {
+		this.grade = grade;
+	}
+
+	public ArrayList<Subjects> getSubjects() {
+		return subjects;
+	}
+
+	public void setSubjects(ArrayList<Subjects> subjects) {
+		this.subjects = subjects;
 	}
 
 }
